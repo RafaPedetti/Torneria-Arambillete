@@ -117,12 +117,6 @@ export default function Footer() {
             </Box>
           </Link>
         </Stack>
-
-        <Divider sx={{ my: { xs: 3, sm: 4 } }} />
-
-        <Typography variant="body2" color="text.secondary" sx={{ textAlign: "center" }}>
-          © Cuidarte {new Date().getFullYear()}. Todos los derechos reservados.
-        </Typography>
       </Container >
     </Box >
   );
