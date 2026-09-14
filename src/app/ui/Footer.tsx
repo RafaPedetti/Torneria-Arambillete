@@ -96,7 +96,7 @@ export default function Footer() {
 
           sx={{ mt: { xs: 4, sm: 5 }, justifyContent: "center" }}
         >
-          <Link href="https://www.instagram.com/cuidarte.sh/" target="_blank" rel="noopener">
+          <Link href="https://www.instagram.com/torneria.sh/" target="_blank" rel="noopener">
             <Box component="span" sx={socialIconSx}>
               <InstagramIcon fontSize="large" />
             </Box>
@@ -111,7 +111,7 @@ export default function Footer() {
               <WhatsAppIcon fontSize="large" />
             </Box>
           </Link>
-          <Link href="mailto:comercialcuidarte2@gmail.com">
+          <Link href="mailto:torneria2@gmail.com">
             <Box component="span" sx={socialIconSx}>
               <EmailIcon fontSize="large" />
             </Box>
