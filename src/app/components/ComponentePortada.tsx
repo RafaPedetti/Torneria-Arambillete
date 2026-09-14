@@ -12,7 +12,6 @@ export default function Hero() {
 
   return (
     <Stack direction={{ xs: "column", sm: "row" }}>
-      {/* Panel 1: imagen + texto secundario */}
       <Box
         component="section"
         sx={{
@@ -41,8 +40,6 @@ export default function Hero() {
           }}
         />
       </Box>
-
-      {/* Panel 2: imagen + título principal */}
       <Box
         component="section"
         sx={{
@@ -73,7 +70,7 @@ export default function Hero() {
           sx={{ position: "relative", zIndex: 2, textAlign: "center", px: 3 }}
         >
           <MotionTypography
-            variant="h4"
+            variant="h1"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

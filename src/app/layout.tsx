@@ -5,6 +5,7 @@ import "@fontsource/montserrat";
 import ClientLayout from "./ui/root-layout";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -13,8 +14,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Torneria Arambillete",
-   description: "Torneria Arambillete.",
-  keywords: ["Torneria","Arambillete","Torneria Arambillete","Torneria Arambillete Uruguay","Torneria Mecanica","Fresados","Matricería","Rectificado plano","Mantenimeinto Industrial"],
+  description: "Torneria Arambillete.",
+  keywords: ["Torneria", "Arambillete", "Torneria Arambillete", "Torneria Arambillete Uruguay", "Torneria Mecanica", "Fresados", "Matricería", "Rectificado plano", "Mantenimeinto Industrial"],
   authors: [{ name: "Torneria Arambillete" }],
   openGraph: {
     title: "Torneria Arambillete",
@@ -50,11 +51,13 @@ export default function RootLayout({
       <head>
       </head>
       <body className={`${montserrat.className} antialiased`}>
-        <Header />
-        <ClientLayout>
-          {children}
-        </ClientLayout>
-        <Footer />
+        <AppRouterCacheProvider>
+          <Header />
+          <ClientLayout>
+            {children}
+          </ClientLayout>
+          <Footer />
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

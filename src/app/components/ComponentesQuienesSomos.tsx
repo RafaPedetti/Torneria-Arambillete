@@ -24,17 +24,26 @@ export default function ComponenteFilosofia() {
             >
                 QUIENES SOMOS
             </MotionTypography>
-            <Stack direction="row" spacing={1} sx={{ mb: 2, justifyContent: "center", alignItems: "center" }}>
-                <Typography>
+            <Stack
+                direction={{ xs: "column", sm: "row" }}
+                sx={{
+                    alignItems: "center",
+
+                    width: "80%",
+                    mx: "auto",
+                }}
+            >
+                <Typography sx={{textAlign:"left"}}>
                     Empresa familiar desde el año 1996 con trabajos relacionados en sus inicios en la rama de platico hoy en día abarcamos otros rubros de metal mecantica
                 </Typography>
+                <Image
+                    src="/images/torneria1.png"
+                    alt="Taller de tornería"
+                    width={500}
+                    height={500}
+                />
             </Stack>
-            <Image
-                src="/images/torneria1.png"
-                alt="Taller de tornería"
-                width={1200}
-                height={800}
-            />
+
         </Box>
     );
 }
