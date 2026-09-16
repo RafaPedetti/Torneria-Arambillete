@@ -29,7 +29,7 @@ export default function ComponenteContacto({
   imagen = "/images/torneria3.jpg",
 }: ContactoProps) {
   return (
-    <Box sx={{ maxWidth: 1150, mx: "auto" }}>
+    <Box sx={{ maxWidth: 1150, mx: "auto" }} id="contacto">
       <Stack spacing={1.5} sx={{ mb: 5, alignItems: "center" }}>
         <MotionTypography
           variant="h2"
