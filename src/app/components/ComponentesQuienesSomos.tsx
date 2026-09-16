@@ -20,7 +20,12 @@ export default function ComponenteQuienesSomos() {
                 whileHover={{ color: theme.palette.primary.dark, scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 200 }}
                 gutterBottom
-                sx={{ cursor: 'pointer' }}
+                sx={{
+                    cursor: 'pointer',
+                    xs: "2rem",
+                    sm: "2.5rem",
+                    md: "3.5rem",
+                }}
             >
                 QUIENES SOMOS
             </MotionTypography>
