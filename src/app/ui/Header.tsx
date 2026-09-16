@@ -14,42 +14,22 @@ import {
   IconButton,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { navButtonSx } from "./navButtonSx";
 
 type NavLink = { label: string; href: string };
 
 const leftLinks: NavLink[] = [
-  { label: "Inicio", href: "/" },
-  { label: "Contacto", href: "/contacto" },
+  { label: "Inicio", href: "/#inicio" },
+  { label: "Servicios", href: "/#servicios" },
+
 ];
 
 const rightLinks: NavLink[] = [
-  { label: "Nosotros", href: "/nosotros" },
-  { label: "Servicios", href: "/servicios" },
+  { label: "Nosotros", href: "/#nosotros" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 const allLinks = [...leftLinks, ...rightLinks];
-
-function navButtonSx(active: boolean) {
-  return {
-    textTransform: "none" as const,
-    fontWeight: active ? 700 : 500,
-    color: active ? "primary.main" : "text.secondary",
-    position: "relative" as const,
-    "&:hover": { color: "primary.main", backgroundColor: "transparent" },
-    "&::after": {
-      content: '""',
-      position: "absolute",
-      left: 12,
-      right: 12,
-      bottom: 6,
-      height: "2px",
-      backgroundColor: "primary.main",
-      transform: active ? "scaleX(1)" : "scaleX(0)",
-      transition: "transform 0.2s ease",
-    },
-    "&:hover::after": { transform: "scaleX(1)" },
-  };
-}
 
 export default function Header() {
   const pathname = usePathname();
@@ -98,8 +78,6 @@ export default function Header() {
             </Button>
           ))}
         </Box>
-
-        {/* Mobile: botón menú */}
         <Box sx={{ display: { xs: "flex", md: "none" }, position: "absolute", right: 16 }}>
           <IconButton
             onClick={handleOpen}

@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Link, Stack, Divider } from "@mui/material";
+import { Box, Container, Typography, Link, Stack } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";

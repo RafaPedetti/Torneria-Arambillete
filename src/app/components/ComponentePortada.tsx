@@ -13,19 +13,20 @@ export default function Hero() {
   return (
     <Stack direction={{ xs: "column", sm: "row" }}>
       <Box
+        id="inicio"
         component="section"
         sx={{
           position: "relative",
           flex: 1,
-          height: { xs: "45vh", sm: "60vh" },
+          height: { xs: "55vh", sm: "70vh" },
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          alignItems: "flex-end",
+          justifyContent: "flex-start",
           overflow: "hidden",
         }}
       >
         <Image
-          src="/images/torneria1.png"
+          src="/images/torneria2hd.png"
           alt="Taller de tornería"
           fill
           priority
@@ -36,55 +37,63 @@ export default function Hero() {
             position: "absolute",
             inset: 0,
             zIndex: 1,
-            bgcolor: alpha(theme.palette.common.black, 0.4),
+            background: `linear-gradient(to top, ${alpha(
+              theme.palette.common.black,
+              0.85
+            )} 0%, ${alpha(theme.palette.common.black, 0.35)} 45%, ${alpha(
+              theme.palette.common.black,
+              0.05
+            )} 100%)`,
           }}
         />
-      </Box>
-      <Box
-        component="section"
-        sx={{
-          position: "relative",
-          flex: 1,
-          height: { xs: "45vh", sm: "60vh" },
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          overflow: "hidden",
-        }}
-      >
-        <Image
-          src="/images/metal.avif"
-          alt="Trabajo en metal industrial"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-        <Box
-          sx={{
-            position: "absolute",
-            inset: 0,
-            zIndex: 1,
-            bgcolor: alpha(theme.palette.primary.dark, 0.75),
-          }}
-        />
+
         <MotionBox
-          sx={{ position: "relative", zIndex: 2, textAlign: "center", px: 3 }}
+          sx={{
+            position: "relative",
+            zIndex: 2,
+            textAlign: "left",
+            px: { xs: 3, sm: 6 },
+            pb: { xs: 4, sm: 6 },
+            maxWidth: { sm: "650px" },
+          }}
         >
+          <Typography
+            component="p"
+            sx={{
+              display: { xs: "none", sm: "block" },
+              color: theme.palette.primary.light,
+              fontWeight: 700,
+              letterSpacing: "0.18em",
+              fontSize: { xs: "0.7rem", sm: "0.8rem" },
+              mb: 1.5,
+            }}
+          >
+            DESDE 1996 · MONTEVIDEO
+          </Typography>
+          <Box
+            sx={{
+              width: 48,
+              height: 3,
+              bgcolor: theme.palette.primary.light,
+              mb: 2.5,
+            }}
+          />
           <MotionTypography
             variant="h1"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            whileHover={{ color: theme.palette.primary.light, scale: 1.02 }}
+            whileHover={{ color: theme.palette.primary.light, scale: 1.01 }}
             transition={{ type: "spring", stiffness: 200 }}
-            gutterBottom
             sx={{
               cursor: "pointer",
               color: "common.white",
               fontWeight: 700,
-              fontSize: { xs: "1.6rem", sm: "2.2rem" },
+              lineHeight: 1.1,
+              fontSize: { xs: "1.9rem", sm: "3rem" },
             }}
           >
-            Tornería · Mantenimiento Industrial · Matricería
+            Tornería  · Matricería · Mantenimiento Industrial
           </MotionTypography>
         </MotionBox>
       </Box>
