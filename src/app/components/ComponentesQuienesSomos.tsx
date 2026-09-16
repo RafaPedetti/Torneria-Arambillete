@@ -51,6 +51,7 @@ export default function ComponenteQuienesSomos() {
                             width: "100%",
                             height: "auto",
                             objectFit: "cover",
+                            borderRadius:"8px"
                         }}
                     />
                 </Box>
