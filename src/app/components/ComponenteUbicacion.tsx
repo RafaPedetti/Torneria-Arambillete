@@ -27,7 +27,18 @@ export default function ComponenteUbicacion({ lat, lng }: AddressMapProps) {
       >
         UBICACIÓN
       </MotionTypography>
-      <Paper elevation={3} sx={{ overflow: "hidden", borderRadius: 2 }}>
+      <Paper
+        elevation={3}
+        sx={{
+          width: {
+            xs: "100%",
+            md: "80%",
+          },
+          mx: "auto",
+          overflow: "hidden",
+          borderRadius: 2,
+        }}
+      >
         <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}>
           <Map
             defaultCenter={{ lat, lng }}
