@@ -21,9 +21,8 @@ export default function ComponenteServicios() {
                 gutterBottom
                 sx={{
                     cursor: 'pointer',
-                    xs: "2rem",
-                    sm: "2.5rem",
-                    md: "3.5rem",
+                    fontSize: "clamp(2rem, 5vw, 4rem)",
+                    textAlign: "center",
                 }}
             >
                 SERVICIOS

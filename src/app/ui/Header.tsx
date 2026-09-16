@@ -42,7 +42,6 @@ export default function Header() {
   return (
     <AppBar position="static" color="inherit" elevation={0} sx={{ borderBottom: "1px solid", borderColor: "divider" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", gap: 2, py: { xs: 1, sm: 0 } }}>
-        {/* Izquierda: links desktop */}
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1, flex: 1 }}>
           {leftLinks.map((link) => (
             <Button
@@ -56,7 +55,6 @@ export default function Header() {
           ))}
         </Box>
 
-        {/* Centro: logo */}
         <Box
           component={NextLink}
           href="/"

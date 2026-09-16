@@ -41,9 +41,8 @@ export default function ComponenteContacto({
           gutterBottom
           sx={{
             cursor: 'pointer',
-            xs: "2rem",
-            sm: "2.5rem",
-            md: "3.5rem",
+            fontSize: "clamp(2rem, 5vw, 4rem)",
+            textAlign: "center",
           }}
         >
           SOLICITÁ TU PRESUPUESTO
@@ -52,7 +51,7 @@ export default function ComponenteContacto({
         <Typography
           color="text.secondary"
           sx={{
-            maxWidth: 700,
+            maxWidth: "80%",
             textAlign: "center",
             fontSize: "1.05rem",
           }}
@@ -81,7 +80,12 @@ export default function ComponenteContacto({
             }}
           >
             <Box>
-              <Typography variant="h4" gutterBottom sx={{ fontWeight: 800 }}>
+              <Typography variant="h4" gutterBottom sx={{
+                cursor: 'pointer',
+                fontSize: "clamp(2rem, 5vw, 3rem)",
+                textAlign: "center",
+                fontWeight: 700,
+              }}>
                 ¿Necesitás una pieza o reparación?
               </Typography>
 
